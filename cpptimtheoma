@@ -1,0 +1,26 @@
+void searchDishId() { 
+    int id; 
+    int found = 0; 
+    if(number!=0){ 
+    while (!found) { 
+        cout << "Nhap ma mon ban muon tim: "; 
+        cin >> id; 
+        for (int i = 0; i < number; i++) { 
+            if (menu[i].id == id) { 
+                cout << "Mon tim thay: \nMa=" << menu[i].id << "\nTen=" << menu[i].name << "\nGia=" << menu[i].price << endl; 
+                found = 1; 
+                return; 
+            } 
+        } 
+        if (!found) { 
+            cout << "Khong tim thay mon ban can tim. Vui long nhap lai.\n"<<"Neu muon thoat thi nhap 0." << endl; 
+        } 
+        if(id==0){ 
+            break; 
+        } 
+    }
+    } else { 
+        cout << "Chua co mon. Vui long them mon" << endl; 
+        addDish();  
+    } 
+} 
