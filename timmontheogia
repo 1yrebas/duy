@@ -1,0 +1,26 @@
+void searchDishPrice() { 
+    if(number!=0){ 
+    double price; 
+    int found = 0; 
+    while (!found) { 
+        printf("Nhap gia mon ban muon tim: "); 
+        scanf("%lf", &price); 
+        for (int i = 0; i < number; i++) { 
+            if (menu[i].price == price) { 
+                printf("Mon tim thay: \nMa=%d\nTen=%s\nGia=%.2lf\n", menu[i].id, menu[i].name, menu[i].price); 
+                found = 1; 
+                return; 
+            } 
+        } 
+        if (!found) { 
+            printf("Khong tim thay mon ban can tim. Vui long nhap lai.\nNeu muon dung thi nhap 0.\n"); 
+        } 
+        if(price==0){ 
+        break; 
+    } 
+    } 
+    } else { 
+        printf("Chua co mon vui long nhap them mon.\n"); 
+        addDish(); 
+    } 
+} 
