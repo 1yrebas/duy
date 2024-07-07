@@ -1,0 +1,13 @@
+void sortDishId() { 
+    for (int i = 0; i < number - 1; i++) { 
+        for (int j = i + 1; j < number; j++) { 
+            if (menu[i].id > menu[j].id) { 
+                dish tmp = menu[i]; 
+                menu[i] = menu[j]; 
+                menu[j] = tmp; 
+            } 
+        } 
+    } 
+    cout << "Sap xep xong." << endl; 
+    saveToFileDish(); 
+} 
