@@ -19,8 +19,7 @@ void searchDishId() {
             break; 
         } 
     } 
-  }
-else { 
+    } else { 
         printf("Chua co mon vui long nhap them mon.\n"); 
         addDish(); 
     } 
