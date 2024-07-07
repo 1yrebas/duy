@@ -1,0 +1,12 @@
+void sortStaffId() { 
+    for (int i = 0; i < number - 1; i++) { 
+        for (int j = i + 1; j < number; j++) { 
+            if (staff[i].id > staff[j].id) { 
+                people tmp = staff[i]; 
+                staff[i] = staff[j]; 
+                staff[j] = tmp; 
+            } 
+        } 
+    } 
+    printf("Sap xep xong.\n"); 
+} 
