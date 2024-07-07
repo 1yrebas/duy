@@ -1,0 +1,13 @@
+void sortStaffId() { 
+    for (int i = 0; i < nop - 1; i++) { 
+        for (int j = i + 1; j < nop; j++) { 
+            if (staff[i].id > staff[j].id) { 
+                people tmp = staff[i]; 
+                staff[i] = staff[j]; 
+                staff[j] = tmp; 
+            } 
+        } 
+    } 
+    cout << "Sap xep xong." << endl; 
+    saveToFileStaff(); 
+} 
