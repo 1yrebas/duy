@@ -1,0 +1,26 @@
+void searchStaffId() { 
+    if(nop!=0){ 
+    int id; 
+    int found = 0; 
+    while (!found) { 
+        printf("Nhap ma nhan vien ban muon tim: "); 
+        scanf("%d", &id); 
+        for (int i = 0; i < number; i++) { 
+            if (staff[i].id == id) { 
+                printf("Nhan vien tim thay: \nMa=%d\nTen=%s\nLuong=%.2lf\n", staff[i].id, staff[i].name,staff[i].slr); 
+                found = 1; 
+                return; 
+            } 
+        } 
+        if (!found) { 
+            printf("Khong tim thay nhan vien. Vui long nhap lai.\nNeu muon thoat nhap 0.\n"); 
+        } 
+        if(id==0){ 
+            break; 
+        } 
+    } 
+    } else { 
+        printf("Chua co nhan vien vui long them nhan vien.\n"); 
+        addStaff(); 
+    } 
+} 
